@@ -61,7 +61,6 @@ elseif ($_POST['process'] == 'update') {
   else if ($data["type"] == "addsixmonths") {
     $utils->log('it is addsixmonths');
     $updateCtl->updateSixMonths($data);
-    
   }
   else if ($data['type'] == 'modifydatecolumn') $updateCtl->updateDateColumn($data);
 
@@ -69,7 +68,6 @@ elseif ($_POST['process'] == 'update') {
   $readCtl = new readControl();
   $html = $readCtl->getSchedule();
   $retarray['html'] .= $html;
-
 } // close process == update
 
 //XXX process == create xxx//
