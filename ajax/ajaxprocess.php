@@ -2,7 +2,7 @@
 if ( strpos( $_SERVER["DOCUMENT_ROOT"], 'public_html' ) > -1 ) 
      define('LOCATION', 'REMOTE');
 else define('LOCATION', 'LOCAL');
-list($fileroot) = explode('ajax/ajaxprocess.php', $_SERVER["SCRIPT_FILENAME"]);
+$fileroot = explode('ajax/ajaxprocess.php', $_SERVER["SCRIPT_FILENAME"])[0];
 include $fileroot . 'includes/configuration.php';
 ini_set('error_log', $fileroot . 'logs/errorlog.txt');
 

@@ -3,7 +3,7 @@ if ( strpos( $_SERVER["DOCUMENT_ROOT"], 'public_html' ) > -1 )
      define('LOCATION', 'REMOTE');
 else define('LOCATION', 'LOCAL');
 ini_set('error_log', 'logs/errorlog.txt');
-list($fileroot) = explode('index.php', __FILE__);
+$fileroot = explode('index.php', __FILE__)[0];
 include 'includes/configuration.php';
 include 'includes/utils.php';
 $utils = new clsUtils();
